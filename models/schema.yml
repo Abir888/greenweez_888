@@ -35,3 +35,42 @@ models:
 
           - name: margin
             description: the difference between the price at which a product is sold and the costs associated with making or selling the product
+
+    - name: orders
+      description: some KPIs related to orders
+            
+            
+      columns:
+          - name: orders_id
+            description: id for each order made 
+            tests : 
+            - unique
+            - not_null 
+
+          - name: shipping_fee
+            description: ...
+            tests : 
+            - not_null 
+
+
+          - name: turnover
+            description: the amount of money taken by the business from selling a certain product
+            tests : 
+            - not_null 
+
+          - name: purchase_cost
+            description: the cost of each product paid by the customer
+            tests : 
+            - not_null 
+
+
+
+          - name: ship_cost
+            description: ...
+            tests : 
+            - not_null 
+
+          - name: log_cost
+            description: ...
+            tests : 
+            - not_null 
