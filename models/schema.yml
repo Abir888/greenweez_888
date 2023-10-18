@@ -1,0 +1,37 @@
+version: 2
+
+models:
+
+    - name: sales
+      description: some KPIs related to products and orders
+      tests:
+        - unique:
+            column_name: "(orders_id || '-' || products_id)"
+            
+            
+      columns:
+          - name: orders_id
+            description: id for each order made 
+            tests : 
+            - not_null 
+
+          - name: products_id
+            description: id for each product in an order
+            tests : 
+            - not_null 
+
+          - name: qty
+            description: quantaity of a certain product purchased in one order_id
+
+          - name: turnover
+            description: the amount of money taken by the business from selling a certain product
+            tests : 
+            - not_null 
+
+          - name: purchase_cost
+            description: the cost of each product paid by the customer
+            tests : 
+            - not_null 
+
+          - name: margin
+            description: the difference between the price at which a product is sold and the costs associated with making or selling the product
