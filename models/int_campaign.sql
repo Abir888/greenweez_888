@@ -1,3 +1,6 @@
+{{ config(schema='campaigns') }}
+
+
 SELECT * FROM {{ ref('stg_adwords') }}
 UNION ALL
 SELECT * FROM {{ ref('stg_bing') }}
